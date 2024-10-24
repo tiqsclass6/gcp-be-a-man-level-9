@@ -97,8 +97,8 @@ func entrypointHandler(w http.ResponseWriter, r *http.Request) {
         <body>
 		<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
 		<div class="w3-display-middle">
-			<h1>Welcome to My Go HTTP Server!</h1>
-			<a href="/increment">GITHUB</a>
+			<h1>大阪</h1>
+			<a href="https://github.com/Gwenbleidd32/GO-Template-With-Metrics/tree/main">GITHUB</a>
 		</div>
 		</div>
 
