@@ -13,6 +13,46 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
+// Prometheus tools
+
+// Define custom metrics for load testing
+var (
+	// Measure the duration of HTTP requests
+	requestDuration = prometheus.NewHistogramVec(
+		prometheus.HistogramOpts{
+			Name:    "http_request_duration_seconds",
+			Help:    "Duration of HTTP requests in seconds",
+			Buckets: prometheus.DefBuckets,
+		},
+		[]string{"method", "path"},
+	)
+
+	// Count the total number of HTTP requests
+	requestCount = prometheus.NewCounterVec(
+		prometheus.CounterOpts{
+			Name: "http_requests_total",
+			Help: "Total number of HTTP requests",
+		},
+		[]string{"method", "path"},
+	)
+
+	// Count the number of request errors
+	requestErrors = prometheus.NewCounterVec(
+		prometheus.CounterOpts{
+			Name: "http_request_errors_total",
+			Help: "Total number of failed HTTP requests",
+		},
+		[]string{"method", "path", "status_code"},
+	)
+)
+
+func init() {
+	// Register custom metrics with Prometheus
+	prometheus.MustRegister(requestDuration)
+	prometheus.MustRegister(requestCount)
+	prometheus.MustRegister(requestErrors)
+}
+
 
 // Collector that contains the descriptors for the metrics from the app.
 // Foo is a gauge with no labels. Bar is a counter with no labels.
@@ -98,7 +138,7 @@ func entrypointHandler(w http.ResponseWriter, r *http.Request) {
 		<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
 		<div class="w3-display-middle">
 			<h1>大阪</h1>
-			<a href="https://github.com/Gwenbleidd32/GO-Template-With-Metrics/tree/main">GITHUB</a>
+			<button onclick="window.location.href='https://github.com/Gwenbleidd32/GO-Template-With-Metrics/tree/main'">GITHUB</button>
 		</div>
 		</div>
 
