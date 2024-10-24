@@ -92,6 +92,16 @@ func (collector *fooBarCollector) Collect(ch chan<- prometheus.Metric) {
 }
 
 func entrypointHandler(w http.ResponseWriter, r *http.Request) {
+	// Start Measuring the time before hhandling request
+	start := time.Now()
+
+	// Increment the request count
+	requestCount.WithLabelValues(r.Method, r.URL.Path).Inc()
+	// Increment request duration
+	requestDuration.WithLabelValues(r.Method, r.URL.Path).Observe(time.Since(start).Seconds())
+
+
+	// HTML response
     w.Header().Set("Content-Type", "text/html; charset=utf-8")
     fmt.Fprintln(w, `
         <!doctype html>
@@ -106,14 +116,14 @@ func entrypointHandler(w http.ResponseWriter, r *http.Request) {
                 body,h1 {font-family: "Raleway", sans-serif}
                 body, html {height: 100%}
                 .bgimg {
-                  background-image: url('https://storage.googleapis.com/a-dream/don.jpg');
+                  background-image: url('https://storage.googleapis.com/a-dream/Houses.jpg');
                   min-height: 100%;
                   background-position: center;
                   background-size: cover;
                 }
 
                 .w3-display-middle {
-                  background-image: url('https://storage.googleapis.com/a-dream/any.png');
+                  background-image: url('https://storage.googleapis.com/a-dream/blue.png');
                   background-size: cover;
                   padding: 200px;
                   border-radius: 25px;
@@ -137,7 +147,7 @@ func entrypointHandler(w http.ResponseWriter, r *http.Request) {
         <body>
 		<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
 		<div class="w3-display-middle">
-			<h1>大阪</h1>
+			<h1>GERMANY</h1>
 			<button onclick="window.location.href='https://github.com/Gwenbleidd32/GO-Template-With-Metrics/tree/main'">GITHUB</button>
 		</div>
 		</div>

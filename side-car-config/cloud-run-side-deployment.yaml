@@ -1,0 +1,30 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  annotations:
+    run.googleapis.com/launch-stage: ALPHA
+  name: my-cloud-run-service
+spec:
+  template:
+    metadata:
+      annotations:
+        run.googleapis.com/execution-environment: gen2
+        run.googleapis.com/cpu-throttling: "false"
+        run.googleapis.com/container-dependencies: '{"collector":["app"]}'
+    spec:
+      containers:
+        - image: europe-central2-docker.pkg.dev/pooper-scooper/run-gmp/test-8:latest
+          name: app
+          startupProbe:
+            httpGet:
+              path: /startup
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /liveness
+              port: 8000
+          ports:
+            - containerPort: 8000
+        - image: us-docker.pkg.dev/cloud-ops-agents-artifacts/cloud-run-gmp-sidecar/cloud-run-gmp-sidecar:1.1.1
+          name: collector
+          # TODO(b/342463134): Post release 1.2.0, update the collector container to use the healthcheck endpoint
