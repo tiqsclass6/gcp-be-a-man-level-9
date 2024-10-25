@@ -11,10 +11,12 @@ Currently the unwrapped docker image in the repo is designed for deployment with
 In My next iteration I will adjust the go file for this to deploy in kubernetes with compatibility with a standard prometheus instance. 
 
 I will also be constructing a cloud run pipleing for the image in this configuration.
+
 ---
 
 
 Sample Commands to build and push and deploy the image are below, as are the helm commands if you have a kuberenetes cluster:
+
 ---
 Cloud build Construction and Deployment:
 
