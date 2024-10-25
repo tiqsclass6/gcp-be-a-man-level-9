@@ -29,6 +29,7 @@ docker push europe-central2-docker.pkg.dev/lizzos-project/run-gmp/lizzo
 # "Download the Yaml for the sidecar and navigate to it's working directory. configure the image to the name of your image"
 >
 gcloud run services replace run-service-simple.yaml --region=europe-central2
+>
 # "Tear Down"
 >
 gcloud run services delete my-cloud-run-service --region=europe-central2
@@ -45,6 +46,7 @@ helm repo add demon https://storage.googleapis.com/berons-helm/
 helm repo update
 >
 helm install demon demon/baldhead-chart --version 1.0.0
+>
 # "Teardown" 
 >
 helm uninstall demon
