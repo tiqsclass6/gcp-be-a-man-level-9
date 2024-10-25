@@ -15,7 +15,7 @@ I will also be constructing a cloud run pipline for the image in this configurat
 ---
 
 
-Sample Commands to build and push and deploy the image are below, as are the helm commands if you have a kuberenetes cluster:
+Sample Commands to build and push and deploy the image are below, I also included the helm commands if you have a kuberenetes cluster:
 
 ---
 Cloud build Construction and Deployment:
