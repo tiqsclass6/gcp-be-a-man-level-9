@@ -37,7 +37,7 @@ gcloud run services delete my-cloud-run-service --region=europe-central2
 ```
 ---
 
-Kuberenetes Helm Deployment -> "If you want to adjust my preconfigured paramiters; copy the values.yaml and helm install pointing to a local copy with your configured settings.":
+Kuberenetes Helm Deployment -> "If you want to adjust my preconfigured parameters; copy the values.yaml and helm install pointing to a local copy with your configured settings.":
 
 ```
 >
