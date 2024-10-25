@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  baldhead-chart:
+  - apiVersion: v2
+    created: "2024-10-24T20:57:42.4977496-07:00"
+    description: My 2nd helm chart deploying my new go based application with secuirty
+      contexts. Not designed for serious modifications.
+    digest: 403bd0fc3f3c7cc31bbc19fd41a1b57b0ecab77c98aac2cee00d6a0dec1cab46
+    maintainers:
+    - email: beron.bantonburns@gmail.com
+      name: Beron Banton II
+    name: baldhead-chart
+    urls:
+    - https://storage.googleapis.com/berons-helm/baldhead-chart-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-10-24T20:57:42.4967494-07:00"

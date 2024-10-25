@@ -1,0 +1,36 @@
+namespace:
+  name: operation-roundabout
+
+statefulset:
+  name: stateful-baldhead
+  appLabel: stateful-baldhead
+  replicas: 3
+  automountServiceAccountToken: false
+  image: "europe-central2-docker.pkg.dev/pooper-scooper/run-gmp/test-8:latest"
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+
+service:
+  name: berons-service
+  port: 80
+  targetPort: 8000
+
+hpa:
+  name: copycat-hpa
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+
+resourcequota:
+  name: compute-resources
+  requests:
+    cpu: "2"
+    memory: "4Gi"
+  limits:
+    cpu: "4"
+    memory: "8Gi"
