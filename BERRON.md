@@ -36,7 +36,6 @@ Conceived as a trial in the great arena of technical interviews and recruitment 
 │   ├── cloud-run-side-deployment.yaml # Cloud Run Deployment
 |
 ├── Screenshots/
-│   ├── cloud-build-logs.mp4
 │   ├── cloud-run-app-results.jpg
 │   ├── cloud-run-service-build.jpg
 │   ├── cloud-run-service-details.jpg
