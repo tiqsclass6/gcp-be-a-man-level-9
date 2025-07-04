@@ -1,8 +1,0 @@
-apiVersion: v2
-name: baldhead-chart  # Name of your Helm chart
-version: 1.0.0           # Version of your chart
-description: My 2nd helm chart deploying my new go based application with secuirty contexts. Not designed for serious modifications.  # Optional, but good practice to include
-maintainers:             # Optional, but good practice to include
-  - name: Beron Banton II
-    email: beron.bantonburns@gmail.com
-

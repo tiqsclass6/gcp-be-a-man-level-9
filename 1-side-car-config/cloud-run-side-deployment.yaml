@@ -13,7 +13,7 @@ spec:
         run.googleapis.com/container-dependencies: '{"collector":["app"]}'
     spec:
       containers:
-        - image: europe-central2-docker.pkg.dev/pooper-scooper/run-gmp/test-8:latest
+        - image: europe-central2-docker.pkg.dev/class-6-5-tiqs/run-gmp/lizzo
           name: app
           startupProbe:
             httpGet:

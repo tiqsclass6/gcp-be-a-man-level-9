@@ -1,6 +1,0 @@
-To deploy this application in you cluster, you don't have to customize any configurations, but if you want...
-You're free to edit the Statefulset, the service, The autoscaler, or the Resource quota. 
-
-Directly reference my values.yaml within the repo when designing you custom configuration.
-Hopefully this is fairly easy to undertand an not to difficult.
-My the Baldheads be disposed upon you if you're able to replicate this setup.
