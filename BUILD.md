@@ -144,33 +144,33 @@ gcloud artifacts repositories create run-gmp \
 - **NOTE:** If the Shell Script does not work add these IAM policies manually.
 
   ```bash
-  gcloud projects add-iam-policy-binding class-6-5-tiqs \
+  gcloud projects add-iam-policy-binding your-project-id \
     --member="user:daquietstorm22@gmail.com" \
     --role="roles/artifactregistry.writer"
 
-  gcloud projects add-iam-policy-binding class-6-5-tiqs \
-    --member="serviceAccount:run-gmp-sa@class-6-5-tiqs.iam.gserviceaccount.com" \
+  gcloud projects add-iam-policy-binding your-project-id \
+    --member="serviceAccount:run-gmp-sa@your-project-id.iam.gserviceaccount.com" \
     --role="roles/artifactregistry.writer"
 
-  gcloud projects add-iam-policy-binding class-6-5-tiqs \
-    --member="serviceAccount:run-gmp-sa@class-6-5-tiqs.iam.gserviceaccount.com" \
+  gcloud projects add-iam-policy-binding your-project-id \
+    --member="serviceAccount:run-gmp-sa@your-project-id.iam.gserviceaccount.com" \
     --role="roles/storage.objectViewer"
 
-  gcloud projects add-iam-policy-binding class-6-5-tiqs \
-    --member="serviceAccount:run-gmp-sa@class-6-5-tiqs.iam.gserviceaccount.com" \
+  gcloud projects add-iam-policy-binding your-project-id \
+    --member="serviceAccount:run-gmp-sa@your-project-id.iam.gserviceaccount.com" \
     --role="roles/cloudbuild.builds.editor"
 
-  gcloud projects add-iam-policy-binding class-6-5-tiqs \
-    --member="serviceAccount:run-gmp-sa@class-6-5-tiqs.iam.gserviceaccount.com" \
+  gcloud projects add-iam-policy-binding your-project-id \
+    --member="serviceAccount:run-gmp-sa@your-project-id.iam.gserviceaccount.com" \
     --role="roles/logging.logWriter"
 
-  gcloud projects add-iam-policy-binding class-6-5-tiqs \
-    --member="serviceAccount:run-gmp-sa@class-6-5-tiqs.iam.gserviceaccount.com" \
+  gcloud projects add-iam-policy-binding your-project-id \
+    --member="serviceAccount:run-gmp-sa@your-project-id.iam.gserviceaccount.com" \
     --role="roles/run.admin"
 
   gcloud iam service-accounts add-iam-policy-binding \
-    run-gmp-sa@class-6-5-tiqs.iam.gserviceaccount.com \
-    --member="serviceAccount:23535658182@cloudbuild.gserviceaccount.com" \
+    run-gmp-sa@your-project-id.iam.gserviceaccount.com \
+    --member="serviceAccount:<YOUR PROJECT NUMBER>@cloudbuild.gserviceaccount.com" \
     --role="roles/iam.serviceAccountUser"
   ```
 
@@ -201,11 +201,11 @@ gcloud builds submit . \
 
 ```bash
 gcloud run deploy my-cloud-run-service \
-  --image=us-central1-docker.pkg.dev/class-6-5-tiqs/run-gmp/sample-app \
+  --image=us-central1-docker.pkg.dev/your-project-id/run-gmp/sample-app \
   --region=us-central1 \
   --platform=managed \
   --allow-unauthenticated \
-  --service-account=run-gmp-sa@class-6-5-tiqs.iam.gserviceaccount.com
+  --service-account=run-gmp-sa@your-project-id.iam.gserviceaccount.com
 ```
 
 ---
