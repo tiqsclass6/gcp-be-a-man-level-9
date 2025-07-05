@@ -224,6 +224,10 @@ gcloud run deploy my-cloud-run-service \
 
   ![my-cloud-run-url-confirmation](/Screenshots/my-cloud-run-url-confirmation.jpg)
 
+- **Prometheus Metrics Results:**
+
+  ![prometheus-metric-results](/Screenshots/prometheus-metric-results.jpg)
+
 ---
 
 ## 🛠️ Troubleshooting
