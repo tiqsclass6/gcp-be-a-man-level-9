@@ -1,4 +1,4 @@
-# Be A Man Level 9 (Part I) - Lord Berron's Saga
+# Be A Man Level 9 (Part I) - Lord Beron's Saga
 
 ![Cloud Run](https://img.shields.io/badge/GCP-Cloud_Run-blue?logo=googlecloud)
 ![GMP Sidecar](https://img.shields.io/badge/Monitoring-GMP_Sidecar-orange?logo=prometheus)
@@ -9,10 +9,10 @@
 
 ## 🎯 Project Goal
 
-> _“By the decree of Lord Berron, steward of Cloud and sentinel of observability,
+> _“By the decree of Lord Beron, steward of Cloud and sentinel of observability,
 > let this scroll bear record of a noble pursuit in the age of digital empires.”_
 
-In the age of cloud-born legions and serverless dominions, this project was forged under the guidance of **Lord Berron** to demonstrate the sacred rites of deploying a **Cloud Run service**—one fortified with **Google Managed Prometheus (GMP) sidecars**. These sidecars, loyal sentinels of metrics, export vital telemetry to the realm of **Cloud Operations**, sparing engineers the burden of managing Prometheus hosts by hand.
+In the age of cloud-born legions and serverless dominions, this project was forged under the guidance of **Lord Beron** to demonstrate the sacred rites of deploying a **Cloud Run service**—one fortified with **Google Managed Prometheus (GMP) sidecars**. These sidecars, loyal sentinels of metrics, export vital telemetry to the realm of **Cloud Operations**, sparing engineers the burden of managing Prometheus hosts by hand.
 
 Conceived as a trial in the great arena of technical interviews and recruitment trials, this work serves as a beacon for all firms pledging fealty to GCP-native CI/CD rituals and scalable observability. Within these files lies the architecture of a microservice legion—hardened by **Docker**, baptized in **Cloud Build**, and deployed unto the frontier of **Cloud Run.**
 
@@ -54,8 +54,8 @@ Conceived as a trial in the great arena of technical interviews and recruitment 
 ├── go.mod
 ├── go.sum
 ├── main.go
-├── BERRON.md                          # Lord Berron's Guide
-├── README.md                          # Lord Berron's Guidance
+├── BERON.md                           # Lord Beron's Guide
+├── README.md                          # Lord Beron's Guidance
 ```
 
 ---
@@ -167,7 +167,7 @@ gcloud run services replace cloud-run-side-deployment.yaml --region=europe-centr
 
 ## ⚔️ Epilogue
 
-**Ave**, noble herald of **Lord Berron** —  
+**Ave**, noble herald of **Lord Beron** —  
 The cloud has been tamed,  
 The metrics summoned,  
 And the service ascended.
@@ -181,7 +181,7 @@ Jenkins catacombs,
 or Prometheus watchtowers…  
 **Simply Summon Me.**
 
-🏛️ ~ _Gloria Berronis_
+🏛️ ~ _Gloria Beronis_
 
 ![cloud-run-app-results](Screenshots/cloud-run-app-results.jpg)
 
